@@ -1,0 +1,24 @@
+[
+  {
+    "id": "1",
+    "title": "Frontend Engineer",
+    "company": "Nimbus Labs",
+    "location": "Bengaluru, India",
+    "type": "Full-time",
+    "tags": ["React", "Tailwind"],
+    "salary": "₹12 - 18 LPA",
+    "postedAt": "2025-11-28",
+    "description": "Build delightful user experiences and ship front-end code."
+  },
+  {
+    "id": "2",
+    "title": "Backend Engineer",
+    "company": "Atlas Data",
+    "location": "Remote",
+    "type": "Full-time",
+    "tags": ["Node.js", "MongoDB"],
+    "salary": "₹10 - 16 LPA",
+    "postedAt": "2025-12-01",
+    "description": "Design and implement scalable backend services."
+  }
+]

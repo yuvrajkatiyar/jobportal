@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+
+:root{
+  /* --bg-start: #0d42ee;
+  --bg-mid:  #f8fafc;
+  --bg-end:  #f1f5f9; */
+  --bg: #005bb6e3;
+  --card: #1E1E1E;
+  --muted: #6b7280;
+  --brand: #fdfeff;      /* dark navy */
+  --accent: #b2d6fa;     /* indigo-600 */
+  --soft-shadow: 0 8px 20px rgba(15,23,42,0.06);
+}
+
+/* make app use full height */
+html,body,#root { height: 100%; }
+
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui;
+  background: linear-gradient(180deg, #0f172a 100%);
+
+  color: var(--brand);
+  -webkit-font-smoothing: antialiased;
+}
+
+
+/* centered container helper for pages */
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* subtle card style used across the UI */
+.card {
+  background: var(--card);
+  /* color: #f3f3f4; */
+  border-radius: 0.5rem; /* rounded-lg */
+  box-shadow: var(--soft-shadow);
+  border: 1px solid rgba(15,23,42,0.06);
+}
+
+/* header utilities */
+.site-header {
+  background: linear-gradient(180deg,#0b1220,#0f172a);
+  color: #fff;
+}
+.site-header .container {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 1rem 0;
+}
+
+/* Search inputs a bit larger & cleaner */
+.search-input {
+  background: #1E1E1E;
+  border: 1px solid rgba(15,23,42,0.08);
+  padding: 0.75rem 0.9rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  outline: none;
+  transition: box-shadow .15s, border-color .15s;
+}
+.search-input:focus {
+  box-shadow: 0 6px 18px rgba(79,70,229,0.08);
+  border-color: rgba(79,70,229,0.5);
+}
+
+/* tag/badge */
+.tag {
+  display:inline-block;
+  font-size: .75rem;
+  padding: 0.25rem .5rem;
+  border-radius: 999px;
+  background: rgba(79,70,229,0.06);
+  color: var(--accent);
+  border: 1px solid rgba(79,70,229,0.12);
+}
+
+/* job card hover */
+.job-card:hover {
+  transform: translateY(-4px);
+  transition: transform .16s ease;
+}
+
+/* small responsive tweaks */
+@media (min-width: 768px) {
+  .search-row { display:flex; gap:1rem; align-items:center; }
+  .search-input { width: auto; }
+}

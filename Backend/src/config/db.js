@@ -1,10 +1,14 @@
 import mongoose from "mongoose";
 
 export default async function connectDB() {
-  const uri = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/job-portal";
+  const uri = process.env.MONGO_URI;
 
-  // Mongoose 7+ auto-handles the old options (useNewUrlParser, useUnifiedTopology, etc.)
+  if (!uri) {
+    throw new Error("MONGO_URI environment variable is not defined");
+  }
+
   await mongoose.connect(uri);
 
   console.log("✅ MongoDB connected");
 }
+```

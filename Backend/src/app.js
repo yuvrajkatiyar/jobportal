@@ -1,14 +1,21 @@
 // src/app.js
+import "dotenv/config";
+
 import express from "express";
 import helmet from "helmet";
 import cors from "cors";
 import path from "path";
+
 import authRoutes from "./routes/auth.routes.js";
 import jobsRoutes from "./routes/jobs.routes.js";
 import appsRoutes from "./routes/applications.routes.js";
 import errorHandler from "./middlewares/error.middleware.js";
+import connectDB from "./config/db.js";
 
 const app = express();
+
+// Connect to MongoDB
+await connectDB();
 
 app.use(helmet());
 app.use(cors());
